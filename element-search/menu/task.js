@@ -1,9 +1,7 @@
 "use strict";
 
 const menu = document.querySelectorAll("li a.menu__link");
-
 const activateMenu = (element) => element.classList.add("menu_active");
-
 const disactivateMenu = (element) => element.classList.remove("menu_active");
 
 for (let i = 0; i < menu.length; i++) {
@@ -22,9 +20,9 @@ for (let i = 0; i < menu.length; i++) {
           }
           activateMenu(element);
         }
+        return false;
       }  
     }
-    return false;  
   }
 }
 
