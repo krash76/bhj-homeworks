@@ -13,7 +13,6 @@ rightArrow.onclick = function() {
   let activeIndex = slidersArray.findIndex(isActive);
   sliders[activeIndex].classList.remove("slider__item_active");
   slidersArray[activeIndex].className = "slider__item";
-
   if (activeIndex < 4) {
     let nextIndex = activeIndex + 1;
     sliders[nextIndex].classList.add("slider__item_active");
@@ -30,7 +29,6 @@ leftArrow.onclick = function() {
   let activeIndex = slidersArray.findIndex(isActive);
   sliders[activeIndex].classList.remove("slider__item_active");
   slidersArray[activeIndex].className = "slider__item";
-
   if (activeIndex === 0) {
     let nextIndex = 4;
     sliders[nextIndex].classList.add("slider__item_active");
