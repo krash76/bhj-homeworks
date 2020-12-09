@@ -16,21 +16,22 @@ class Game {
     this.lossElement.textContent = 0;
   }
 
+  
   registerEvents() {
     const simbol = this.currentSymbol.textContent.toUpperCase();
-   
-    window.addEventListener('keydown', function control(event) {
+    function control(event) {
       if ( String(event.key).toUpperCase() === simbol) {
-        this.success();//что не так???
+        this.success();//???
         } else {
-        this.fail();//что не так???
+        this.fail();//???
         }
       }
-    );
-//console.log (String(event.key).toUpperCase(), simbol.toUpperCase(), 'success')
-  }
+    document.addEventListener('keydown', control);
+  };
 
-  success() {
+    
+    
+ success() {
     this.currentSymbol.classList.add('symbol_correct');
     this.currentSymbol = this.currentSymbol.nextElementSibling;
     if (this.currentSymbol !== null) {
