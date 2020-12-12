@@ -18,18 +18,16 @@ class Game {
 
   
   registerEvents() {
-    const simbol = this.currentSymbol.textContent.toUpperCase();
-    function control(event) {
-      if ( String(event.key).toUpperCase() === simbol) {
-        this.success();//???
+    document.addEventListener('keydown', (event) => {
+      let symbol = this.currentSymbol.textContent.toUpperCase();
+      if (event.key.toUpperCase() === symbol) {
+        this.success();
         } else {
-        this.fail();//???
+        this.fail();
         }
       }
-    document.addEventListener('keydown', control);
+    );
   };
-
-    
     
  success() {
     this.currentSymbol.classList.add('symbol_correct');
